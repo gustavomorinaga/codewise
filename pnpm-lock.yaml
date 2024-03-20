@@ -6,54 +6,66 @@ settings:
 
 dependencies:
   '@astrojs/check':
-    specifier: ^0.5.9
+    specifier: 0.5.9
     version: 0.5.9(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.3)
   '@astrojs/svelte':
-    specifier: ^5.2.0
+    specifier: 5.2.0
     version: 5.2.0(astro@4.5.6)(svelte@4.2.12)(typescript@5.4.3)(vite@5.1.6)
   '@astrojs/tailwind':
-    specifier: ^5.1.0
+    specifier: 5.1.0
     version: 5.1.0(astro@4.5.6)(tailwindcss@3.4.1)
   astro:
-    specifier: ^4.5.6
+    specifier: 4.5.6
     version: 4.5.6(typescript@5.4.3)
+  clsx:
+    specifier: 2.1.0
+    version: 2.1.0
+  lucide-svelte:
+    specifier: 0.359.0
+    version: 0.359.0(svelte@4.2.12)
   svelte:
-    specifier: ^4.2.12
+    specifier: 4.2.12
     version: 4.2.12
+  tailwind-merge:
+    specifier: 2.2.2
+    version: 2.2.2
+  tailwind-variants:
+    specifier: 0.2.1
+    version: 0.2.1(tailwindcss@3.4.1)
   tailwindcss:
-    specifier: ^3.4.1
+    specifier: 3.4.1
     version: 3.4.1
   typescript:
-    specifier: ^5.4.3
+    specifier: 5.4.3
     version: 5.4.3
 
 devDependencies:
   '@typescript-eslint/eslint-plugin':
-    specifier: ^7.3.1
+    specifier: 7.3.1
     version: 7.3.1(@typescript-eslint/parser@7.3.1)(eslint@8.57.0)(typescript@5.4.3)
   '@typescript-eslint/parser':
-    specifier: ^7.3.1
+    specifier: 7.3.1
     version: 7.3.1(eslint@8.57.0)(typescript@5.4.3)
   eslint:
-    specifier: ^8.57.0
+    specifier: 8.57.0
     version: 8.57.0
   eslint-config-prettier:
-    specifier: ^9.1.0
+    specifier: 9.1.0
     version: 9.1.0(eslint@8.57.0)
   eslint-plugin-astro:
-    specifier: ^0.31.4
+    specifier: 0.31.4
     version: 0.31.4(eslint@8.57.0)
   prettier:
-    specifier: ^3.2.5
+    specifier: 3.2.5
     version: 3.2.5
   prettier-plugin-astro:
-    specifier: ^0.13.0
+    specifier: 0.13.0
     version: 0.13.0
   prettier-plugin-tailwindcss:
-    specifier: ^0.5.12
+    specifier: 0.5.12
     version: 0.5.12(prettier-plugin-astro@0.13.0)(prettier@3.2.5)
   pretty-quick:
-    specifier: ^4.0.0
+    specifier: 4.0.0
     version: 4.0.0(prettier@3.2.5)
 
 packages:
@@ -407,6 +419,13 @@ packages:
       '@babel/helper-plugin-utils': 7.24.0
       '@babel/plugin-syntax-jsx': 7.24.1(@babel/core@7.24.1)
       '@babel/types': 7.24.0
+    dev: false
+
+  /@babel/runtime@7.24.1:
+    resolution: {integrity: sha512-+BIznRzyqBf+2wCTxcKE3wDjfGeCoVE61KSHGpkzqrLi8qxqFwBeUFyId2cxkTmm55fzDGnm0+yCxaxygrLUnQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
     dev: false
 
   /@babel/template@7.24.0:
@@ -2922,6 +2941,14 @@ packages:
     dependencies:
       yallist: 4.0.0
 
+  /lucide-svelte@0.359.0(svelte@4.2.12):
+    resolution: {integrity: sha512-75CzrB26QbMSmXywosx8Yt6XvvN+OSmLG5TaVOAEaEwkZ4kBcT1yLBzbBPe2aXMu9fFi/HwOiOYCkavKaEKujQ==}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5.0.0-next.42
+    dependencies:
+      svelte: 4.2.12
+    dev: false
+
   /magic-string@0.30.8:
     resolution: {integrity: sha512-ISQTe55T2ao7XtlAStud6qwYPZjE4GK1S/BeVPus4jrq6JuOnQ00YKQC581RWhR122W7msZV263KzVeLoqidyQ==}
     engines: {node: '>=12'}
@@ -3969,6 +3996,10 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+    dev: false
+
   /rehype-parse@9.0.0:
     resolution: {integrity: sha512-WG7nfvmWWkCR++KEkZevZb/uw41E8TsH4DsY9UxsTbIXCVGbAs4S+r8FrQ+OtH5EEQAs+5UxKC42VinkmpA1Yw==}
     dependencies:
@@ -4475,6 +4506,22 @@ packages:
       '@pkgr/core': 0.1.1
       tslib: 2.6.2
     dev: true
+
+  /tailwind-merge@2.2.2:
+    resolution: {integrity: sha512-tWANXsnmJzgw6mQ07nE3aCDkCK4QdT3ThPMCzawoYA2Pws7vSTCvz3Vrjg61jVUGfFZPJzxEP+NimbcW+EdaDw==}
+    dependencies:
+      '@babel/runtime': 7.24.1
+    dev: false
+
+  /tailwind-variants@0.2.1(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-2xmhAf4UIc3PijOUcJPA1LP4AbxhpcHuHM2C26xM0k81r0maAO6uoUSHl3APmvHZcY5cZCY/bYuJdfFa4eGoaw==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
+    dependencies:
+      tailwind-merge: 2.2.2
+      tailwindcss: 3.4.1
+    dev: false
 
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}

@@ -1,8 +1,7 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
-export default {
-	plugins: [],
+const config = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	safelist: ['dark'],
@@ -41,10 +40,6 @@ export default {
 					DEFAULT: 'hsl(var(--accent) / <alpha-value>)',
 					foreground: 'hsl(var(--accent-foreground) / <alpha-value>)'
 				},
-				success: {
-					DEFAULT: 'hsl(var(--success) / <alpha-value>)',
-					foreground: 'hsl(var(--success-foreground) / <alpha-value>)'
-				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover) / <alpha-value>)',
 					foreground: 'hsl(var(--popover-foreground) / <alpha-value>)'
@@ -60,12 +55,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['var(--font-sans)', ...fontFamily.sans],
-				mono: ['var(--font-mono)', ...fontFamily.mono]
-			},
-			fontSize: {
-				tiny: '0.750rem'
+				sans: [...fontFamily.sans]
 			}
 		}
 	}
 };
+
+export default config;
