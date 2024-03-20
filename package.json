@@ -1,6 +1,10 @@
 {
 	"name": "codewise",
+	"private": true,
 	"type": "module",
+	"author": "Gustavo Morinaga <me@gustavomorinaga.dev>",
+	"description": "WIP",
+	"license": "MIT",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "astro dev",
@@ -12,7 +16,8 @@
 		"format": "prettier --write . --plugin=prettier-plugin-astro",
 		"format:check": "prettier --check . --plugin=prettier-plugin-astro",
 		"format:staged": "pretty-quick --staged",
-		"ui:add": "pnpm dlx shadcn-svelte@latest add"
+		"ui:add": "pnpm dlx shadcn-svelte@latest add",
+		"clean": "del-cli ./**/node_modules/ ./**/dist"
 	},
 	"dependencies": {
 		"@astrojs/check": "0.5.9",
@@ -30,6 +35,7 @@
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "7.3.1",
 		"@typescript-eslint/parser": "7.3.1",
+		"del-cli": "5.1.0",
 		"eslint": "8.57.0",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-astro": "0.31.4",
