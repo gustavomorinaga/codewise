@@ -1,6 +1,6 @@
 ---
-import Layout from '$lib/layouts/main.layout.astro';
-import Wrapper from '$lib/layouts/wrapper.layout.astro';
+import { MainLayout } from '$lib/layouts/main';
+import { Wrapper } from '$lib/components/features/main/wrapper';
 import * as Card from '$lib/components/ui/card';
 
 const LINKS = [
@@ -27,7 +27,7 @@ const LINKS = [
 ];
 ---
 
-<Layout title="Welcome to Astro.">
+<MainLayout>
 	<Wrapper>
 		<h1 class="mb-4 text-3xl font-bold">
 			Welcome to Astro + Svelte + shadcn-svelte + Tailwind CSS
@@ -48,4 +48,4 @@ const LINKS = [
 			}
 		</ul>
 	</Wrapper>
-</Layout>
+</MainLayout>

@@ -1,0 +1,45 @@
+---
+import '$lib/styles/app.css';
+import { siteConfig } from '$lib/configs';
+
+interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+}
+
+const title = Astro.props.title ? `${siteConfig.name} - ${Astro.props.title}` : siteConfig.name;
+const description = Astro.props.description || siteConfig.description;
+const keywords = Astro.props.keywords || siteConfig.keywords;
+const pathname = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en" class="dark" style="color-scheme: dark;">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content={siteConfig.author} />
+		<meta name="twitter:site" content={siteConfig.url} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:creator" content={siteConfig.author} />
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content={siteConfig.url + pathname} />
+		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content={siteConfig.name} />
+		<meta property="og:locale" content="EN_US" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+
+	<body>
+		<slot />
+	</body>
+</html>
