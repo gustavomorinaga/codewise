@@ -24,6 +24,7 @@
 		"@astrojs/svelte": "5.2.0",
 		"@astrojs/tailwind": "5.1.0",
 		"astro": "4.5.6",
+		"bits-ui": "^0.20.0",
 		"clsx": "2.1.0",
 		"lucide-svelte": "0.359.0",
 		"svelte": "4.2.12",
