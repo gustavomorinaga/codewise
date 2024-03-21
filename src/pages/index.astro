@@ -1,5 +1,6 @@
 ---
 import { MainLayout } from '$lib/layouts/main';
+import { Header } from '$lib/components/features/main/header';
 import { Wrapper } from '$lib/components/features/main/wrapper';
 import * as Card from '$lib/components/ui/card';
 
@@ -28,6 +29,8 @@ const LINKS = [
 ---
 
 <MainLayout>
+	<Header />
+
 	<Wrapper>
 		<h1 class="mb-4 text-3xl font-bold">
 			Welcome to Astro + Svelte + shadcn-svelte + Tailwind CSS
