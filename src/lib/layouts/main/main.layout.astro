@@ -1,6 +1,7 @@
 ---
 import '$lib/styles/app.css';
 import { siteConfig } from '$lib/configs';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title?: string;
@@ -37,6 +38,7 @@ const pathname = Astro.url.pathname;
 		<meta property="og:locale" content="EN_US" />
 		<link rel="icon" href="/favicon.ico" sizes="any" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<ViewTransitions />
 	</head>
 
 	<body>

@@ -1,1 +1,1 @@
-export { default as Wrapper } from '../wrapper/wrapper.astro';
+export { default as Wrapper } from './wrapper.svelte';
