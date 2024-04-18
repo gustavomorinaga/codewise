@@ -20,31 +20,31 @@
 		"clean": "del-cli ./**/node_modules/ ./**/dist"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.5.9",
-		"@astrojs/svelte": "5.2.0",
+		"@astrojs/check": "0.5.10",
+		"@astrojs/svelte": "5.4.0",
 		"@astrojs/tailwind": "5.1.0",
 		"@fontsource/ibm-plex-mono": "5.0.12",
 		"@fontsource/ibm-plex-sans": "5.0.19",
-		"astro": "4.5.8",
-		"bits-ui": "0.20.0",
+		"astro": "4.6.3",
+		"bits-ui": "0.21.4",
 		"clsx": "2.1.0",
-		"lucide-svelte": "0.360.0",
-		"svelte": "4.2.12",
+		"lucide-svelte": "0.371.0",
+		"svelte": "4.2.15",
 		"tailwind-merge": "2.2.2",
 		"tailwind-variants": "0.2.1",
-		"tailwindcss": "3.4.1",
-		"typescript": "5.4.3"
+		"tailwindcss": "3.4.3",
+		"typescript": "5.4.5"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "7.3.1",
-		"@typescript-eslint/parser": "7.3.1",
+		"@typescript-eslint/eslint-plugin": "7.7.0",
+		"@typescript-eslint/parser": "7.7.0",
 		"del-cli": "5.1.0",
 		"eslint": "8.57.0",
 		"eslint-config-prettier": "9.1.0",
-		"eslint-plugin-astro": "0.32.0",
+		"eslint-plugin-astro": "0.34.0",
 		"prettier": "3.2.5",
 		"prettier-plugin-astro": "0.13.0",
-		"prettier-plugin-tailwindcss": "0.5.12",
+		"prettier-plugin-tailwindcss": "0.5.14",
 		"pretty-quick": "4.0.0"
 	}
 }
