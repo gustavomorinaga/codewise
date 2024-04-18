@@ -2,6 +2,28 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Separator } from '$lib/components/ui/separator';
 	import * as Avatar from '$lib/components/ui/avatar';
+	import Bell from 'lucide-svelte/icons/bell';
+	import Search from 'lucide-svelte/icons/search';
+
+	type TPath = {
+		name: string;
+		href: string;
+	};
+
+	const paths = [
+		{
+			name: 'My Classroom',
+			href: '/my-classroom'
+		},
+		{
+			name: 'Browse',
+			href: '/browse'
+		},
+		{
+			name: 'Community',
+			href: '/community'
+		}
+	] as const satisfies Array<TPath>;
 
 	const user = {
 		firstName: 'John',
@@ -20,35 +42,40 @@
 		<nav class="col-span-5 flex">
 			<ul role="navigation" class="flex items-center gap-4">
 				<li role="menuitem">
-					<Button size="sm" variant="ghost">
-						<span>My Classroom</span>
-					</Button>
-				</li>
-				<li>
-					<Button size="sm" variant="ghost">
-						<span>Browse</span>
-					</Button>
-				</li>
-				<li>
-					<Button size="sm" variant="ghost">
-						<span>Community</span>
-					</Button>
+					{#each paths as path}
+						<Button variant="ghost" aria-label={path.name} href={path.href}>
+							<span>{path.name}</span>
+						</Button>
+					{/each}
 				</li>
 			</ul>
 		</nav>
 
 		<div class="col-span-2 flex justify-center">
-			<Button size="sm" variant="ghost" href="/" aria-label="CodeWise" class="text-lg font-bold">
+			<Button variant="ghost" href="/" aria-label="CodeWise" class="text-lg font-bold">
 				<span class="text-white">Code</span>
+				<span class="text-white">.</span>
 				<span class="text-primary">Wise</span>
 			</Button>
 		</div>
 
 		<div class="col-span-5 flex justify-end">
-			<Avatar.Root>
-				<Avatar.Image {...user.avatar} />
-				<Avatar.Fallback>{initials}</Avatar.Fallback>
-			</Avatar.Root>
+			<div class="flex items-center gap-2">
+				<Button variant="ghost" aria-label="Search">
+					<Search class="w-4 h-4 mr-2" />
+					<span>Search</span>
+				</Button>
+
+				<Button size="icon" variant="ghost" aria-label="Notifications">
+					<Bell class="w-4 h-4" />
+					<span class="sr-only">Notifications</span>
+				</Button>
+
+				<Avatar.Root>
+					<Avatar.Image {...user.avatar} />
+					<Avatar.Fallback>{initials}</Avatar.Fallback>
+				</Avatar.Root>
+			</div>
 		</div>
 	</div>
 </header>
