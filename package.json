@@ -12,9 +12,9 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "prettier --check . --plugin=prettier-plugin-astro && eslint .",
-		"format": "prettier --write . --plugin=prettier-plugin-astro",
-		"format:check": "prettier --check . --plugin=prettier-plugin-astro",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
 		"format:staged": "pretty-quick --staged",
 		"ui:add": "pnpm dlx shadcn-svelte@latest add",
 		"clean": "del-cli ./**/node_modules/ ./**/dist"
@@ -42,8 +42,10 @@
 		"eslint": "8.57.0",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-astro": "0.34.0",
+		"eslint-plugin-svelte": "2.38.0",
 		"prettier": "3.2.5",
 		"prettier-plugin-astro": "0.13.0",
+		"prettier-plugin-svelte": "3.2.3",
 		"prettier-plugin-tailwindcss": "0.5.14",
 		"pretty-quick": "4.0.0"
 	}

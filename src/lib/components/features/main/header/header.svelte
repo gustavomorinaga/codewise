@@ -62,12 +62,12 @@
 		<div class="col-span-5 flex justify-end">
 			<div class="flex items-center gap-2">
 				<Button variant="ghost" aria-label="Search">
-					<Search class="w-4 h-4 mr-2" />
+					<Search class="mr-2 h-4 w-4" />
 					<span>Search</span>
 				</Button>
 
 				<Button size="icon" variant="ghost" aria-label="Notifications">
-					<Bell class="w-4 h-4" />
+					<Bell class="h-4 w-4" />
 					<span class="sr-only">Notifications</span>
 				</Button>
 
